@@ -1,0 +1,7 @@
+<div id="main">
+    <h1>Users Component</h1>
+    <div *ngFor="let i of user">
+        <span>{{i.username}}</span>
+        <span><a [routerLink]="['/usercard',i.id]">Profile</a></span>
+    </div>
+</div>

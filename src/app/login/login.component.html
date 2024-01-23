@@ -1,0 +1,24 @@
+<div id="main">
+    <h1>Login Component</h1>
+    <form [formGroup]="register" (ngSubmit)="submit(register)">
+        <div>
+            <label>Name:</label>
+            <input type="text" formControlName="username" class="form-cotrol"/>
+            <div *ngIf="register.get('username')?.invalid && (register.get('username')?.dirty || register.get('username')?.touched)" class="text-danger">please enter a valid name with 5 characters</div>
+        </div>
+        <div>
+                 <label>Password:</label>
+    <input type="password" formControlName="password" class="form-control"/>
+          <div *ngIf="register.get('password')?.invalid && (register.get('password')?.dirty || register.get('password')?.touched)" class="text-danger">please enter a valid password with  8 characters</div>
+
+            </div>
+ <div>
+            <label>Phone Number</label>
+    <input type="number" formControlName="contact" class="form-control"/>
+          <div *ngIf="register.get('contact')?.invalid && (register.get('contact')?.dirty || register.get('contact')?.touched)" class="text-danger">please enter valid phone number</div>
+ </div>
+
+    <button type="submit" [disabled]="register.invalid">Submit</button>
+   </form>
+</div>
+

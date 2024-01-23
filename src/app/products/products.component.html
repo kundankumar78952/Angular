@@ -1,0 +1,22 @@
+<div>
+    <h1>Product Component</h1>
+    <button (click)="getData()">Get Data</button>
+    <div *ngIf="data">
+        <table [border]="2">
+            <tr>
+                <th>ID</th>
+                <th>title</th>
+                <th>price</th>
+                <th>desciption</th>
+            </tr>
+            <tr *ngFor="let d of data"> 
+                <td>{{d.id}}</td>
+                <td>{{d.title}}</td>
+                <td>{{d.price}}</td>
+                <td>{{d.description}}</td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>

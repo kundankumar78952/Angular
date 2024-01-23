@@ -1,0 +1,127 @@
+<!-- <p>header works!</p>
+<img src="{{path}}"/>
+<p>This is the {{title}}</p>
+<p>This is the {{d}}</p>
+<h1 class="">CSS Class</h1>
+<h1>Today date is {{tdate}}</h1> -->
+
+<!-- Name:<input type="text"/> -->
+<!-- Password:<input type="password" disabled/> -->
+<!-- Password:<input type="password" [disabled] = "isDisabled" />
+//style binding
+<h1 [style]="{color:hcolor}" >heading with syntax</h1>
+<h1 [style.color]=pcolor>paragrap with syntax2 </h1>
+<h1 [style]=myStyles>hello multiple</h1>
+<h1 [style.color]="isError?'red':'green'">Change colour wrt boolean value</h1>
+//event binding
+<button (click)="increment()">increment</button>
+<h1> counter is {{counter}}</h1>
+//two way data binding
+City:<input type="text" [(ngModel)]="city"/>
+<button (click)="updateCity()">update city</button>
+<h1>{{city}}</h1>
+
+<h1 *ngIf="showHeading">This is a heading </h1>
+<h1 *ngIf="1">This is a heading </h1>
+<h1 *ngIf="data">this is a data property with some data in it</h1>
+<h1 *ngIf="data1">{{data1}}</h1>
+<h1 *ngIf="!data1">!!!!loaading</h1>
+<h1 *ngIf="!data1; then sample1; else sample">Loading....</h1>
+<ng-template #sample>
+    the data is {{data1}}
+</ng-template>
+<ng-template #sample1>Loading data....</ng-template>
+
+<!-- <h1 *ngFor="let a of arr; index as i ">Heading {{a}} = index is {{i}}</h1> -->
+<!-- <table [border]="2">
+    <tr *ngFor="let m of mobiles">
+        <td>{{m}}</td>
+    </tr>
+
+</table> -->
+<!-- <table [border]="2">
+    <tr >
+        <th>Mobiles</th>
+        <th>Index</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Even</th>
+        <th>Odd</th>
+    </tr>
+    <tr *ngFor="let m of mobiles; index as i; first as f;last as l; even as e; odd as o">
+        <td>{{m}}</td>
+        <td>{{i}}</td>
+        <td>{{f}}</td>
+        <td>{{l}}</td>
+        <td>{{e}}</td>
+        <td>{{o}}</td>
+    </tr>
+</table>
+//class binding
+<!-- <div class="cssStringVar" [style.margin]="isActive? myStyle1:'5px'">Test class binding</div> -->
+<!-- <div class="cssStringVar" [ngStyle]="mltclasses">Test class binding</div>
+<div [class.classStyle]=booleanValue>Test class binding</div>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">you picked red color</div>
+    <div *ngSwitchCase="'blue'">you picked blue color</div>
+    <div *ngSwitchCase="'cyan'">you picked cyan color</div>
+    <div *ngSwitchDefault="">Please pick again</div>
+</div>
+<h1 [style.backgroud-color]="pcolor" [style.color]="hcolor">This is heading</h1>
+
+<p [ngStyle]="{
+    'color':'hcolor',
+    'font-size':'fontsize',
+    'border':'borderstyle'
+}">This is a paragraph</p> --> 
+
+<!-- <h1 [ngClass ]="{addColors:colors, addBorders:borders">Using ngClass directives</h1> 
+<h1 *ngIf="display">This is a heading</h1>
+<div *appDisplay="display">
+    <h1>This is a custom structural directive </h1>
+</div>
+-->
+<!-- <h1 appAttr>This is a custom Attibute directive</h1> -->
+
+<!-- 
+<h1>{{title |titlecase}}</h1>
+<h1>{{salary |currency:'INR':'code'}}</h1>
+<h1>{{empDetails |json}}</h1>
+<h1>{{date |date:'MM/dd/YYYY'}}</h1>
+<h1>{{person | test:wish}}</h1>
+<!-- <h1>{{date | date:'dd//mm//yyyy }} </h1> -->
+<!-- <h1 id="demo" class="special" >This is a heading</h1>
+<h1>{{sample.classList}}</h1>-->
+
+ //template refrence 
+<input type="text" #sample/>
+<button (click)="updateName(sample)">Update Name</button>
+<h1>{{name}}</h1> 
+
+<div>
+    <!-- <h1>Child Header Component</h1> -->
+    <!-- <h1>{{ctitle}}</h1>
+    <h1>{{carray}}</h1> -->
+    <!-- <p>{{cdata}}</p>
+    <button (click)="sendData()">Send Data</button>
+    <input type="text" (input)="updateMessage($event)"/>
+    <h1>Data from child :{{message}}</h1> -->
+    <!-- <input type="text"[(ngModel)]="ctitle"/> -->
+    <!-- <p>{{ctitle}}</p>
+    <p>{{sendData()}}</p> -->
+    <!-- <button (click)="sendData()">send</button>
+    <p>{{data}}</p> -->
+    <div id="main">
+        <h1>Header Component</h1>
+        <ul>
+            <li><a routerLink="./about" routerLinkActive="active">About</a></li>
+            <li><a routerLink="./contact" routerLinkActive="active">Contact</a></li>
+            <li><a routerLink="./home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="./login" routerLinkActive="active">Login</a></li>
+            <li><a routerLink="./users" routerLinkActive="active">Users</a></li>
+            <li><a routerLink="./products" routerLinkActive="active">Products</a></li>
+            <button (click)="navToHome()">Navigate to loginPage</button>
+        </ul>
+    </div>
+</div>
