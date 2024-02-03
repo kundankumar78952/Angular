@@ -21,12 +21,11 @@ import { AuthService } from './auth.service';
 // import { PageNotFoundComponent} from './page-not-found/page-not-found';
 import {HttpClientModule} from'@angular/common/http';
 import { ProductsComponent } from './products/products.component';
+import { MycontactComponent } from './mycontact/mycontact.component';
+import { PopupComponent } from './popup/popup.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
+ 
   {
     path: 'header',
     component: HeaderComponent,
@@ -38,6 +37,11 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+    children: [
+      {
+        path: 'contact/mycontact', component: MycontactComponent,
+      },
+    ],
   },
   {
     path: 'home',
@@ -70,7 +74,15 @@ const routes: Routes = [
     component: UsersComponent,
     canActivate: [AuthService],
   },
+  {
+     path: 'popup',
+    component: PopupComponent
+   },
   { path: 'usercard/:id', component: UsercardComponent },
+  { path: '**', redirectTo: '' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  
 ];
 
 
@@ -92,6 +104,8 @@ const routes: Routes = [
     Homechild1Component,
     Homechild2Component,
     ProductsComponent,
+    MycontactComponent,
+    PopupComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule,RouterModule, RouterModule.forRoot(routes),HttpClientModule],
   providers: [TestsService, UsersComponent,AuthService],

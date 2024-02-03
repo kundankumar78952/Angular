@@ -94,10 +94,10 @@ City:<input type="text" [(ngModel)]="city"/>
 <!-- <h1 id="demo" class="special" >This is a heading</h1>
 <h1>{{sample.classList}}</h1>-->
 
- //template refrence 
+ <!-- //template refrence 
 <input type="text" #sample/>
 <button (click)="updateName(sample)">Update Name</button>
-<h1>{{name}}</h1> 
+<h1>{{name}}</h1>  -->
 
 <div>
     <!-- <h1>Child Header Component</h1> -->
@@ -111,17 +111,20 @@ City:<input type="text" [(ngModel)]="city"/>
     <!-- <p>{{ctitle}}</p>
     <p>{{sendData()}}</p> -->
     <!-- <button (click)="sendData()">send</button>
-    <p>{{data}}</p> -->
+    <p>{{data}}</p> --> 
+    <nav>
     <div id="main">
-        <h1>Header Component</h1>
         <ul>
-            <li><a routerLink="./about" routerLinkActive="active">About</a></li>
-            <li><a routerLink="./contact" routerLinkActive="active">Contact</a></li>
             <li><a routerLink="./home" routerLinkActive="active">Home</a></li>
             <li><a routerLink="./login" routerLinkActive="active">Login</a></li>
             <li><a routerLink="./users" routerLinkActive="active">Users</a></li>
             <li><a routerLink="./products" routerLinkActive="active">Products</a></li>
-            <button (click)="navToHome()">Navigate to loginPage</button>
+            <li><a routerLink="./popup" routerLinkActive="active">Popup</a></li>
+            <li><a routerLink="./contact" routerLinkActive="active">Contact</a></li>
+            <li><a [routerLink]="['about']" routerLinkActive="active">About</a></li>
+            <!-- <button (click)="navToHome()">Navigate to loginPage</button> -->
         </ul>
     </div>
+    </nav>
 </div>
+

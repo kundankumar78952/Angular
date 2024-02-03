@@ -1,1 +1,31 @@
-<p>contact works!</p>
+
+<div id="main">
+    
+    <li><a routerLink="./contact/mycontact" routerLinkActive="active"  ><button type="button" class="btn btn-secondary btn-lg" (click)="openModal()" >click to contact</button></a>
+        <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+            <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h4 class="modal-title">Contact Details</h4>
+                              <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                   <div class="modal-body">
+                    <div id="navi">
+                        <p>Name: kundan kumar</p>
+                        <p>Address: E-city, Bangalore, 560100</p>
+                        <p>phone: +919064668503</p>
+                        <p>Email: kundankumar78952@gmail.com</p>
+                        <p>Linkedin: https://www.linkedin.com/in/i-mkundankumar/</p>
+                                    <p class="middle">Thank you</p>
+                    </div>
+                            </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-light" (click)="onCloseHandled()" >Close</button>
+                            </div>
+               </div>
+            </div>
+        </div>
+    </li>
+    <router-outlet></router-outlet>
+</div>
+

@@ -1,3 +1,6 @@
+* {
+  margin: auto;
+}
 .cssStringVar {
     color: blue;
     background-color: aquamarine;
@@ -17,31 +20,30 @@
     border: 4px solid green;
 }
 
-div {
-    background-color: aqua;
-    width: 800px;
-    height: 300px;
-    
-}
+
 
 ul{
     display: flex;
     list-style-type: none;
-    background-color: goldenrod;
+    background-color: rgb(44, 44, 44);
     
 }
 ul li{
     margin: 30px;
     color: white;
-    font-size: bold
-    ;
+    font-size: bold;
 }
-.active{
-    background-color: blue;
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
-button{
+/* button{
     margin-left: 30px;
-    color: blue;
+    color: white;
     background-color: goldenrod;
    border: none; 
-}
+   
+} */

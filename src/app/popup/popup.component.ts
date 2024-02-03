@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-popup',
+  templateUrl: './popup.component.html',
+  styleUrls: ['./popup.component.css']
 })
-export class ContactComponent implements OnInit {
+export class PopupComponent implements OnInit {
   display= "none";
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  openModal(){
+  openModal() {
     this.display = "block";
   }
-  onCloseHandled(){
+  onCloseHandled() {
     this.display = "none";
   }
+
 }
