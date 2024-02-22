@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  images = [944, 1011, 984].map((n) => `/src/assets/img/&{1}.jpg`);
+
+  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
+
+  constructor() {}
 
   ngOnInit(): void {
+   
   }
 
-}
+  onItemChange($event: any): void {
+    console.log('Carousel onItemChange', $event);
+  }
+
+  }
+
+

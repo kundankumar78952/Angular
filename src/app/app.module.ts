@@ -23,6 +23,7 @@ import {HttpClientModule} from'@angular/common/http';
 import { ProductsComponent } from './products/products.component';
 import { MycontactComponent } from './mycontact/mycontact.component';
 import { PopupComponent } from './popup/popup.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 const routes: Routes = [
  
@@ -110,5 +111,6 @@ const routes: Routes = [
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule,RouterModule, RouterModule.forRoot(routes),HttpClientModule],
   providers: [TestsService, UsersComponent,AuthService],
   bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class AppModule {}

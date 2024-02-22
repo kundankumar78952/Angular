@@ -3,5 +3,21 @@
             <li><a routerLink="./home/homechild2" routerLinkActive="active">homechild2</a></li>
           
             <router-outlet></router-outlet>
+            </div>
+            <div>
 
-</div>
+           
+            <c-carousel (itemChange)="onItemChange($event)" [interval]="5000" transition="slide">
+              <c-carousel-inner>
+                <c-carousel-item *ngFor="let slide of slides">
+                  <img
+                    [src]="slide.src"
+                    alt="{{slide.title}}"
+                    class="d-block w-10"
+                    loading="lazy"
+                  />
+                </c-carousel-item>
+              </c-carousel-inner>
+            </c-carousel>
+          </div>
+
