@@ -1,13 +1,43 @@
+<div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="assets/img/3.jpg" class="w-100" alt="img3"/>
+      <div class="carousel-caption">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="assets/img/2.jpg" class="w-100" alt="img2"/>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="assets/img/1.jpg" class="w-100" alt="img1"/>
+    </div>
+  </div> 
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+  <span class="carausel-control-prev-icon">prev</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+  <span class="carausel-control-next-icon">next</span>
+</button>
+
+<div class="carousel-indicators">
+  <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="0"></button>
+  <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1"></button>
+  <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2"></button>
+</div>
+
 <div id="main">
  <li><a routerLink="./home/homechild1" routerLinkActive="active">homechild1</a></li>
             <li><a routerLink="./home/homechild2" routerLinkActive="active">homechild2</a></li>
           
             <router-outlet></router-outlet>
             </div>
-            <div>
+            <!--<div>
 
            
-            <c-carousel (itemChange)="onItemChange($event)" [interval]="5000" transition="slide">
+             <c-carousel (itemChange)="onItemChange($event)" [interval]="5000" transition="slide">
               <c-carousel-inner>
                 <c-carousel-item *ngFor="let slide of slides">
                   <img
@@ -19,5 +49,6 @@
                 </c-carousel-item>
               </c-carousel-inner>
             </c-carousel>
-          </div>
-
+          </div> -->
+          
+          

@@ -24,6 +24,7 @@ import { ProductsComponent } from './products/products.component';
 import { MycontactComponent } from './mycontact/mycontact.component';
 import { PopupComponent } from './popup/popup.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
 
 const routes: Routes = [
  
@@ -107,6 +108,7 @@ const routes: Routes = [
     ProductsComponent,
     MycontactComponent,
     PopupComponent,
+    RightSidebarComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule,RouterModule, RouterModule.forRoot(routes),HttpClientModule],
   providers: [TestsService, UsersComponent,AuthService],
